@@ -2,16 +2,112 @@
 <!doctype html>
 <html>
 <head>
-  <title>google error 404</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <title>Swift, Uma Linguagem</title>
+  <link rel="stylesheet" href="templates/galeria/style.css"/>
+  <!-- <img
+  src="https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo.png?_gl=1*1hxctfl*_ga*bGZVLXJhb0VrYWhtSDNDQ1ZGdVpWbXNZVVhkT2V6UkFuRm02MnN5VzZERkxKVXF5dVpPMjdPcmZvYkI4VVR4RA.."
+  width="400" height="200"> -->
+    </head>
 <main>
-  <body>
-    <img src="https://cdn.britannica.com/10/152310-050-5A09D74A/Sand-dunes-Sahara-Morocco-Merzouga.jpg" width="935" height="622">
-
+  <h1 style ='font-size:100px'> <strong>
+    Swift
+  </h1><h2>Compreenda os objetivos de alto nível da linguagem</h2> </strong>
+  <hr>
+  <body style="text-align:center;">
+  <button style="opacity: 0.6;border-radius: 10px;border: 0.5px solid;"> <a href="{% url 'index' %}" style="font-family: Lucida Console;"> Sobre a Linguagem </a> </button>
+  <button style="opacity: 0.6;border-radius: 10px;border: 0.5px solid;"> <a href="{% url 'index2' %}" style="font-family: Lucida Console;"> Iniciando com Swift </a> </button>
+  <button style="opacity: 0.6;border-radius: 10px;border: 0.5px solid;"> <a href="{% url 'index3' %}"style="font-family: Lucida Console;"> Operadores Básicos </a> </button>
+  <hr>
+  <pre style="text-align: justify;padding: 50px;text;font-size:115%;margin-left:15%;">
+    <strong>Constantes e Variáveis </strong><br>
+    Constantes e variáveis ​​associam um nome (como MaximumNumberOfLoginAttempts ou WelcomeMessage) a um valor de um tipo específico
+    (como o número 10 ou a string "Hello"). <a style="color:red"> O valor de uma constante não pode ser alterado depois de definida</a>, 
+    enquanto uma variável pode ser definida como um valor diferente no futuro.
     
-    <h1> <strong> Quente aqui. Talvez deveriamos procurar agua. Clique <a href="{% url 'index3' %}"> aqui. </a></strong></h1>
-  <br>
-  <br>
+    <strong>Declarando Constantes e Variáveis </strong><br>
+    Constantes e variáveis ​​devem ser declaradas antes de serem usadas. Você declara constantes com a palavra-chave let e variáveis ​​com a 
+    palavra-chave var.
+    Aqui está um exemplo de como constantes e variáveis ​​podem ser usadas para rastrear o número de tentativas de login feitas por um 
+    usuário:
+    <br><a style="color:green"><strong>
+    let máximoNumberOfLoginAttempts = 10
+    var currentLoginAttempt = 0
+    </strong></a><br>
+    Este código pode ser lido como:
+    <em>
+    “Declare uma nova constante chamada maximumNumberOfLoginAttempts e atribua a ela o valor 10. Em seguida, declare uma nova variável 
+    chamada currentLoginAttempt e atribua a ele um valor inicial de 0.”
+    </em>
+    
+    Neste exemplo, o número máximo de tentativas de login permitidas é declarado como constante, porque o valor máximo nunca muda. O
+    o contador de tentativas de login atual é declarado como uma variável, porque esse valor deve ser incrementado após cada tentativa 
+    de login com falha.
+    
+    Se um valor armazenado em seu código não mudar, sempre declare-o como uma constante com a palavra-chave let. Use variáveis ​​apenas para 
+    armazenar valores essa mudança.
+    
+    Ao declarar uma constante ou variável, você pode atribuir um valor a ela como parte dessa declaração, como nos exemplos acima. 
+    Alternativamente, você pode atribuir seu valor inicial posteriormente no programa, desde que seja garantido que ele terá um valor 
+    antes da primeira vez que você o ler.
+    <br><a style="color:green"><strong>
+    var ambiente = "desenvolvimento"
+    deixe máximoNumberOfLoginAttempts: Int
+    //maximumNumberOfLoginAttempts ainda não tem valor.
+
+
+    if environment == "development" {
+    maximumNumberOfLoginAttempts = 100
+    } else {
+    maximumNumberOfLoginAttempts = 10
+    }
+    // Agora maximumNumberOfLoginAttempts tem valor, então pode ser lido.
+    </a><br></strong>
+    Neste exemplo, o número máximo de tentativas de login é constante e seu valor depende do ambiente. No ambiente de desenvolvimento,
+    tem um valor de 100; em qualquer outro ambiente, seu valor é 10. Ambas as ramificações da instrução if inicializam 
+    maximumNumberOfLoginAttempts com algum valor, garantindo que a constante sempre obtenha um valor. Para obter informações sobre como o 
+    Swift verifica seu código quando você define um valor inicial dessa forma, consulte Declaração Constante.
+    
+    Você pode declarar múltiplas constantes ou múltiplas variáveis ​​em uma única linha, separadas por vírgulas:
+    <br><a style="color:green"><strong>
+    var x = 0,0, y = 0,0, z = 0,0
+    </a><br></strong>
+
+    Você pode fornecer uma anotação de tipo ao declarar uma constante ou variável, para deixar claro o tipo de valores da constante ou 
+    variável pode armazenar. Escreva uma anotação de tipo colocando dois pontos após o nome da constante ou variável, seguido de um espaço, 
+    seguido do nome da variável e o tipo a ser usado.
+    
+    Este exemplo fornece uma anotação de tipo para uma variável chamada WelcomeMessage, para indicar que a variável pode armazenar valores 
+    String:
+    <a style="color:green"><strong>
+    var mensagem de boas-vindas: String
+    </a><br></strong>
+    
+    Os dois pontos na declaração significam “…do tipo…”, então o código acima pode ser lido como:
+    
+    <em> “Declare uma variável chamada welcomeMessage que seja do tipo String.”</em>
+    
+    A frase “do tipo String” significa “pode armazenar qualquer valor String”. Pense nisso como significando “o tipo de coisa” (ou “o tipo 
+    de coisa”) que pode ser armazenado.
+    
+    A variável welcomeMessage agora pode ser definida como qualquer valor de string sem erros:
+    
+    <a style="color:green"><strong>WelcomeMessage = "Olá"</a><br></strong>
+
+    Você pode definir múltiplas variáveis ​​relacionadas do mesmo tipo em uma única linha, separadas por vírgulas, com uma única anotação 
+    de tipo após o nome da variável final:
+    
+    <a style="color:green"><strong>var vermelho, verde, azul: duplo</a><br></strong>
+    
+    <strong>Observação</strong>
+    
+    É raro que você precise escrever anotações de tipo na prática. Se você fornecer um valor inicial para uma constante ou variável no 
+    ponto definido, o Swift quase sempre pode inferir o tipo a ser usado para aquela constante ou variável. No exemplo de WelcomeMessage 
+    acima, nenhum valor inicial é fornecido e, portanto, o tipo da variável WelcomeMessage é especificado com uma anotação de tipo em 
+    vez de ser inferida a partir de um valor inicial.
+  </pre>
+  <hr><br>
+    <img
+    src="https://static.wikia.nocookie.net/oncrivelmundodegumball/images/a/ab/Darwinregplisss.png/revision/latest/smart/width/250/height/250?cb=20161202111040&path-prefix=pt">
+   
   </body>
 </html>
